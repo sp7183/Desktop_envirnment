@@ -1,0 +1,108 @@
+/* ----------global theme elements*/
+/* do not change */
+/* START */
+.glass-light {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+    background: rgba(0, 0, 0, 0.4);
+    /* box-shadow: 0 4px 30px rgba(25, 25, 25, 0.4); */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 2px solid rgba(25, 25, 25, 0.4);
+}
+/* END */
+/*----------global theme elements */
+
+/* dock-start-------------------------- */
+
+.dockContainer {
+    width: 100%;
+    height: 6.5vh;
+    /* border: 1px solid red; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 32px;
+    z-index: 0;
+}
+
+.dockPanel {
+    width: fit-content;
+    height: inherit;
+    position: relative;
+    z-index: 998;
+    margin: 0 auto;
+    border-radius: 4px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    /* padding-bottom: 0.5vw; */
+}
+
+.dockItemContainer {
+    width: 100%;
+    height: 100%;
+    position: inherit;
+    z-index: 999;
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.dockItem {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    /* border: 1px solid yellow; */
+    /* border-radius: 8px; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* use transition in intial state so we have hover-exit animation  */
+    filter: grayscale(0);
+    transition:
+        background-size 0.2s ease,
+        filter 0.2s ease;
+}
+
+.dockItem:hover {
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    background-size: 95%;
+    filter: grayscale(100%);
+    /* border-bottom: 1px solid black; */
+    transition:
+        background-size 0.2s ease,
+        filter 0.2s ease;
+}
+/* dock-end---------------- */
+
+/* wallpaper-engine */
+/* START */
+.wallpaper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* wallpaper-engine -  END */
